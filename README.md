@@ -5,7 +5,7 @@
 
 >源码解释
 
-- src/python是用python实现的脚本源代码，使用到的包/模块：requests,re,urllib。其中有4个函数，作用如下
+- src/python是用python实现的脚本源代码，使用到的包/模块：requests,re。其中有4个函数，作用如下
 
   |函数名|参数|作用|
   |-----|---|---|
