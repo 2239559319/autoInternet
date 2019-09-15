@@ -1,12 +1,10 @@
 import requests
 import re
-from urllib.parse import urlencode
 
 def getLoginMsg():
     '''
     登录时获取参数函数
     '''
-    paramsdic = {}          #参数字典
     url = 'http://192.168.2.135'
     r = requests.get(url=url)
     try:
@@ -16,10 +14,7 @@ def getLoginMsg():
         print('你已在线')
     destination = href.split('?')[0]        #跳转目标url
     params = href.split('?')[1]             #params字符串
-    for param in params.split('&'):
-        paramlist = param.split('=')
-        paramsdic[paramlist[0]] = paramlist[1]
-    return destination,paramsdic
+    return params
     
 def login(userId,password):
     '''
@@ -29,7 +24,7 @@ def login(userId,password):
     password :密码
     '''
     url = 'http://192.168.2.135/eportal/InterFace.do?method=login'
-    datadic = getLoginMsg()[1]
+    paramstr = getLoginMsg()
     params = {
         "method":"login"
     }
@@ -37,7 +32,7 @@ def login(userId,password):
         "userId":userId,
         "password":password,
         "service":"internet",
-        "queryString":urlencode(datadic),
+        "queryString":paramstr,
         "operatorPwd":"",
         "operatorUserId":"",
         "validcode":"",
