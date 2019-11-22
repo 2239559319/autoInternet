@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            min-height: 90vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">校园网连接方法</h1>
+    <table class="table table-sm">
+        <thead>
+            <tr class="table-secondary">
+                <th>地点</th>
+                <th>ip</th>
+                <th>路由器ip(默认网关)</th>
+                <th>前缀长度</th>
+                <th>子网掩码</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-primary">
+                <td>综C</td>
+                <td>10.132.[36-39].[1-254]</td>
+                <td>10.132.39.254</td>
+                <td>22</td>
+                <td>255.255.252.0</td>
+            </tr>
+            <tr class="table-info">
+                <td>文科楼3区</td>
+                <td>10.132.[20-23].[1-254]</td>
+                <td>10.132.23.254</td>
+                <td>22</td>
+                <td>255.255.252.0</td>
+            </tr>
+            <tr class="table-success">
+                <td>一教</td>
+                <td>10.132.[0-15].[1-254]</td>
+                <td>10.132.15.254</td>
+                <td>20</td>
+                <td>255.255.240.0</td>
+            </tr>
+            <tr class="table-danger">
+                <td>图书馆</td>
+                <td>10.132.[28-31].[1-254]</td>
+                <td>10.132.31.254</td>
+                <td>22</td>
+                <td>255.255.252.0</td>
+            </tr>
+            <tr>
+                <td>DNS服务器</td>
+                <td colspan="2">(首选)202.115.32.39</td>
+                <td colspan="2"> 202.115.32.36</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="card col-sm">
+            <div class="card-body">
+                <h3 class="card-title">使用条件</h3>
+                <p class="card-text">在有校园网信号但是连不上校园网的时候使用(比如综C以及一些地方)</p>
+            </div>
+        </div>
+        <div class="card col-sm">
+            <div class="card-body">
+                <h3 class="card-title">表格解释</h3>
+                <p class="card-text">表格中的行如[1-4]表示从1-4中任意取出一个整数</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-sm">
+            <div class="card-body">
+                <h3 class="card-title">使用方法</h3>
+                <p class="card-text">打开设备网络设置，更改连接属性，ip配置，不选DHCP选择手动配置ip(静态配置)，然后按上表配置就可以了，</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
